@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="labtutorial2.MainPage"
+             BackgroundColor="White">
+
+    <Grid RowDefinitions="Auto, *">
+
+        <Grid Grid.Row="0" BackgroundColor="#4A148C">
+            <Label Text="AHMAD ZUNNURAIN BIN AHMAD ZAINUDDIN SHAH BCS23020016" 
+                   TextColor="White"
+                   Padding="20,15"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"
+                   FontAttributes="Bold" />
+        </Grid>
+
+        <ScrollView Grid.Row="1">
+
+            <Grid RowDefinitions="Auto, Auto">
+
+                <Image Grid.Row="0"
+                       Source="pug_image.jpeg" Aspect="AspectFill"
+                       HeightRequest="300" />
+
+                <Frame Grid.Row="1"
+                       BackgroundColor="#FFFFF0" CornerRadius="20"
+                       HasShadow="True"
+                       Padding="15"
+                       Margin="15,-30,15,15">
+
+                    <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto"
+                          RowSpacing="15">
+
+                        <Grid Grid.Row="0" ColumnDefinitions="*, Auto">
+                            <VerticalStackLayout Grid.Column="0">
+                                <Label Text="Terry" FontSize="24" FontAttributes="Bold" TextColor="Black" />
+                                <Label Text="small terrier-type dog" FontSize="16" TextColor="Gray" />
+                            </VerticalStackLayout>
+
+                            <HorizontalStackLayout Grid.Column="1" Spacing="8" VerticalOptions="Start">
+                                <Image Source="male_icon.png" WidthRequest="20" HeightRequest="20" />
+                                <Image Source="clock_icon.png" WidthRequest="20" HeightRequest="20" />
+                                <Label Text="3 year old" FontSize="14" TextColor="Gray" VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                        </Grid>
+
+                        <HorizontalStackLayout Grid.Row="1" Spacing="8">
+                            <Image Source="pin_icon.png" WidthRequest="20" HeightRequest="20" />
+                            <Label Text="3D,Lorong Permai Timur 3 Taman Soon Hup Sibu Sarawak" 
+                                   FontSize="14" TextColor="Gray" VerticalOptions="Center" />
+                        </HorizontalStackLayout>
+
+                        <BoxView Grid.Row="2" HeightRequest="1" Color="LightGray" />
+
+                        <Grid Grid.Row="3" ColumnDefinitions="Auto, *, Auto">
+                            <Image Grid.Column="0"
+                                   Source="owner_image.jpg" HeightRequest="50"
+                                   WidthRequest="50"
+                                   Aspect="AspectFill">
+                                <Image.Clip>
+                                    <EllipseGeometry RadiusX="25" RadiusY="25" Center="25,25" />
+                                </Image.Clip>
+                            </Image>
+
+                            <VerticalStackLayout Grid.Column="1" VerticalOptions="Center" Padding="10,0">
+                                <Label Text="Kendrick Lamar" FontAttributes="Bold" TextColor="Black" />
+                                <Label Text="Owner" FontSize="12" TextColor="Gray" />
+                            </VerticalStackLayout>
+
+                            <Label Grid.Column="2" Text="21/10/2025" FontSize="12" TextColor="Gray" VerticalOptions="Start" />
+                        </Grid>
+
+                        <Label Grid.Row="4"
+                               Text="A small, white terrier with a cool black eye patch, watching the world with a quiet, observant vibe from behind his colorful shades."
+                               FontSize="14"
+                               TextColor="Black"
+                               LineHeight="1.2" />
+
+                        <Grid Grid.Row="5" ColumnDefinitions="Auto, *" ColumnSpacing="10" Margin="0,10,0,0">
+                            <Button Grid.Column="0"
+                                    x:Name="LikeButton" Text="♡"
+                                    FontSize="24"
+                                    BackgroundColor="White"
+                                    TextColor="Gray"
+                                    BorderColor="LightGray"
+                                    BorderWidth="1"
+                                    CornerRadius="30"
+                                    WidthRequest="60"
+                                    HeightRequest="60"
+                                    Clicked="OnLikeButtonClicked" />
+
+                            <Button Grid.Column="1"
+                                    Text="Adoption"
+                                    FontAttributes="Bold"
+                                    TextColor="Black"
+                                    BackgroundColor="#FDD835" CornerRadius="30"
+                                    HeightRequest="60" 
+                                    Clicked="OnAdoptionButtonClicked">
+                                <Button.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Color="#FDD835" Offset="0.0" />
+                                    <GradientStop Color="#FFB300" Offset="1.0" />
+                                </LinearGradientBrush>
+                                </Button.Background>
+                            </Button> 
+                            
+                        </Grid>
+
+                    </Grid>
+                </Frame>
+            </Grid>
+        </ScrollView>
+    </Grid>
+
+</ContentPage>
